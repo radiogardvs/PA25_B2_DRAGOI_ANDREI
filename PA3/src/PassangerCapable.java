@@ -1,0 +1,3 @@
+interface PassengerCapable {
+    int getPassengerCapacity();
+}
