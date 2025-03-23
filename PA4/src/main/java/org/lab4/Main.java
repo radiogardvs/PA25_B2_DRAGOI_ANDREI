@@ -1,37 +1,64 @@
 package org.lab4;
-
-import model.Location;
-import model.LocationType;
+import com.github.javafaker.Faker;
+import model.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        List<Location> locations = Arrays.asList(
-                new Location("Base Alpha", LocationType.FRIENDLY),
-                new Location("Outpost Bravo", LocationType.FRIENDLY),
-                new Location("Zone X", LocationType.NEUTRAL),
-                new Location("Enemy Camp 1", LocationType.ENEMY),
-                new Location("Enemy Camp 2", LocationType.ENEMY),
-                new Location("Friendly Outpost", LocationType.FRIENDLY),
-                new Location("Neutral Zone 2", LocationType.NEUTRAL),
-                new Location("Enemy Hideout", LocationType.ENEMY)
-        );
+        Faker faker = new Faker();
 
-        TreeSet<Location> friendlyLocations = locations.stream()
-                .filter(l -> l.getType() == LocationType.FRIENDLY)
-                .collect(Collectors.toCollection(TreeSet::new));
+        List<Location> locations = new ArrayList<>();
 
-        System.out.println("Friendly locations (sorted):");
-        friendlyLocations.forEach(System.out::println);
+        for (int i = 0; i < 5; i++) {
+            locations.add(new Location(faker.address().cityName(), LocationType.FRIENDLY));
+        }
 
-        LinkedList<Location> enemyLocations = locations.stream()
-                .filter(l -> l.getType() == LocationType.ENEMY)
+        for (int i = 0; i < 5; i++) {
+            locations.add(new Location(faker.address().cityName(), LocationType.ENEMY));
+        }
+
+        for (int i = 0; i < 5; i++) {
+            locations.add(new Location(faker.address().cityName(), LocationType.NEUTRAL));
+        }
+
+        Map<LocationType, List<Location>> groupedLocations = locations.stream()
+                .collect(Collectors.groupingBy(Location::getType));
+
+        System.out.println("Locations grouped by type:");
+        groupedLocations.forEach((type, locs) -> {
+            System.out.println(type + " locations:");
+            locs.forEach(loc -> System.out.println("- " + loc.getName()));
+        });
+
+        System.out.println("\nFriendly locations (sorted by name):");
+        locations.stream()
+                .filter(loc -> loc.getType() == LocationType.FRIENDLY)
+                .sorted(Comparator.comparing(Location::getName))
+                .forEach(loc -> System.out.println("- " + loc.getName()));
+
+        System.out.println("\nEnemy locations (sorted by type then by name):");
+        locations.stream()
+                .filter(loc -> loc.getType() == LocationType.ENEMY)
                 .sorted(Comparator.comparing(Location::getType).thenComparing(Location::getName))
-                .collect(Collectors.toCollection(LinkedList::new));
+                .forEach(loc -> System.out.println("- " + loc.getName()));
 
-        System.out.println("Enemy locations (sorted by type, then name):");
-        enemyLocations.forEach(System.out::println);
+        List<Route> routes = new ArrayList<>();
+        Location start = locations.get(0);
+        Location end = locations.get(1);
+        routes.add(new Route(start, end, 5, 0.9));
+
+        System.out.println("\nShortest path from " + start.getName() + " to " + end.getName() + ":");
+        List<Location> path = RouteFinder.findShortestPath(start, end, createRoutesMap(locations, routes));
+        path.forEach(loc -> System.out.println("- " + loc.getName()));
+    }
+
+    private static Map<Location, List<Route>> createRoutesMap(List<Location> locations, List<Route> routes) {
+        Map<Location, List<Route>> routesMap = new HashMap<>();
+        for (Route route : routes) {
+            routesMap.computeIfAbsent(route.getFrom(), k -> new ArrayList<>()).add(route);
+        }
+        return routesMap;
     }
 }
