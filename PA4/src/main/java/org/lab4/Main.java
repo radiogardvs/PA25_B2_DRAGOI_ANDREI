@@ -47,7 +47,9 @@ public class Main {
         List<Route> routes = new ArrayList<>();
         Location start = locations.get(0);
         Location end = locations.get(1);
-        routes.add(new Route(start, end, 5, 0.9));
+
+        Random rand= new Random();
+        routes.add(new Route(start, end, rand.nextInt(), rand.nextDouble()));
 
         System.out.println("\nShortest path from " + start.getName() + " to " + end.getName() + ":");
         List<Location> path = RouteFinder.findShortestPath(start, end, createRoutesMap(locations, routes));
