@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PA5:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PA5_jar</output-path>
+    <root id="archive" name="PA5.jar">
+      <element id="module-output" name="PA5" />
+    </root>
+  </artifact>
+</component>

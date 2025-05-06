@@ -6,7 +6,7 @@ public class AddCommand implements Command {
     private final ImageItem image;
 
     public AddCommand(String name, String date, String tags, String location) {
-        this.image = new ImageItem(name, LocalDate.parse(date), Arrays.asList(tags.split(",")), Path.of(location));
+        this.image = new ImageItem(name, date, Arrays.asList(tags.split(",")), Path.of(location));
     }
 
     @Override
