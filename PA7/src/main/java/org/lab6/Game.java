@@ -5,7 +5,7 @@ import java.util.*;
 public class Game {
     public static void main(String[] args) {
         int numPlayers = 3;
-        long timeLimit = 30; // 30 secunde de timp pentru joc
+        long timeLimit = 300;
 
         TileBag tileBag = new TileBag();
         Board board = new Board();
@@ -23,10 +23,9 @@ public class Game {
             player.start();
         }
 
-        // Cronometrul pentru a opri jocul după un timp limită
         Thread timekeeper = new Thread(() -> {
             try {
-                Thread.sleep(timeLimit * 1000); // Așteptăm până trece timpul
+                Thread.sleep(timeLimit * 1000);
                 System.out.println("Time limit reached. Stopping game.");
                 manager.isGameRunning(); // Opresc jocul
             } catch (InterruptedException e) {
@@ -36,7 +35,6 @@ public class Game {
         timekeeper.setDaemon(true);
         timekeeper.start();
 
-        // Așteptăm ca toate firele de execuție ale jucătorilor să termine
         for (Player player : players) {
             try {
                 player.join();

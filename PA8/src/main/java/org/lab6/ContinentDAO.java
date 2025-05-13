@@ -24,7 +24,7 @@ public class ContinentDAO {
             stmt.setString(1, name);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                continent = new Continent(rs.getInt("id"), rs.getString("name"));
+                //continent = new Continent(rs.getInt("id"), rs.getString("name"));
                 System.out.println("Continent gasit: " + continent.getName());
             } else {
                 System.out.println("Nu s-a gasit niciun continent cu numele: " + name);

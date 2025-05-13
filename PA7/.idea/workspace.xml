@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f0adf2dc-2cea-4733-84c0-fbe44e7516dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../PA5/.idea/artifacts/PA5_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA5/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA5/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA5/src/main/java/ImageItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA5/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA6/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA6/src/main/java/org/lab6/ConfigPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA6/src/main/java/org/lab6/ControlPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA6/src/main/java/org/lab6/DrawingPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA6/src/main/java/org/lab6/MainFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dictionary.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab6/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab6/Dictionary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab6/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab6/GameManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab6/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab6/TileBag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab6/TimeKeeper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lab6/dictionary.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA8/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA8/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA8/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA8/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA8/src/main/java/org/lab6/Continent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA8/src/main/java/org/lab6/ContinentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA8/src/main/java/org/lab6/Country.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA8/src/main/java/org/lab6/CountryDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PA8/src/main/java/org/lab6/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA1" beforeDir="false" afterPath="$PROJECT_DIR$/../PA1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PA5/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/PA5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PA5/PA5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/src/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PA5/src/main/java/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/src/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PA5/src/main/java/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/src/DisplayCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PA5/src/main/java/DisplayCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/src/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PA5/src/main/java/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/src/ImageDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PA5/src/main/java/ImageDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/src/ImageException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PA5/src/main/java/ImageException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/src/ImageItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/src/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PA5/src/main/java/ImageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/src/InvalidCommandException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PA5/src/main/java/InvalidCommandException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PA5/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA5/src/RemoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PA5/src/main/java/RemoveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA6/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../PA6/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA6/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA6/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PA6/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA6/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA6/PA6.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA6/src/ConfigPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA6/src/ControlPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA6/src/DrawingPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA6/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PA6/src/MainFrame.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;radiogardvs&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/radiogardvs/PA25_B2_DRAGOI_ANDREI.git&quot;,
+    &quot;accountId&quot;: &quot;475b9892-5e41-43ff-b644-6887da44608a&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2vRd934DeY5z4IjumWrp17y61bc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Game.executor": "Run",
+    "Application.Main.executor": "Run",
+    "JAR Application.PA7-1.0-SNAPSHOT.jar.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/drago/IdeaProjects/PA/PA7",
+    "onboarding.tips.debug.path": "C:/Users/drago/IdeaProjects/PA/PA7/src/main/java/org/lab6/Main.java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\drago\IdeaProjects\PA\PA7" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PA7-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/PA7-1.0-SNAPSHOT.jar" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.PA7-1.0-SNAPSHOT.jar" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f0adf2dc-2cea-4733-84c0-fbe44e7516dc" name="Changes" comment="" />
+      <created>1744111668801</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744111668801</updated>
+    </task>
+    <servers />
+  </component>
+</project>

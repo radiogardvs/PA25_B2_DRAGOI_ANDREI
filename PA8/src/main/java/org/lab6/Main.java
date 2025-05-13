@@ -1,26 +1,46 @@
 package org.lab6;
 
+
+import jakarta.persistence.EntityManager;
+
+import java.util.List;
+
 public class Main {
-
     public static void main(String[] args) {
-        ContinentDAO continentDAO = new ContinentDAO();
-        CountryDAO countryDAO = new CountryDAO();
+        EntityManager em = EntityManagerSingleton.getEntityManagerFactory().createEntityManager();
+        try {
+            CountryRepository countryRepository = new CountryRepository();
+            ContinentRepository continentRepository = new ContinentRepository();
 
-        continentDAO.addContinent("Europe");
+            Continent continent = new Continent();
+            continent.setName("Europe");
+            continent.setCode("EU");
+            em.getTransaction().begin();
+            em.persist(continent);
+            em.getTransaction().commit();
 
-        Continent europe = continentDAO.getContinentByName("Europe");
-        if (europe != null) {
-            System.out.println("Continentul cu id-ul " + europe.getId() + " a fost gasit!");
-            countryDAO.addCountry("Germany", "DEU", europe.getId());
-        } else {
-            System.out.println("Nu am reusit sa obtinem continentul 'Europe' din baza de date.");
-        }
+            Country country = new Country();
+            country.setName("Romania");
+            country.setCode("RO");
+            em.getTransaction().begin();
+            em.persist(country);
+            em.getTransaction().commit();
 
-        Country germany = countryDAO.getCountryById(1);
-        if (germany != null) {
-            System.out.println("Tara adaugata: " + germany.getName() + " cu codul " + germany.getCode());
-        } else {
-            System.out.println("Nu am reusit sa obtinem tara cu ID-ul 1.");
+            List<Country> countries = countryRepository.findByName("Romania");
+            for (Country c : countries) {
+                System.out.println("Country: " + c.getName() + ", Code: " + c.getCode());
+            }
+
+            List<Continent> continents = continentRepository.findByName("Europe");
+            for (Continent c : continents) {
+                System.out.println("Continent: " + c.getName() + ", Code: " + c.getCode());
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            em.close();
+            EntityManagerSingleton.close();
         }
     }
 }

@@ -26,7 +26,7 @@ public class CountryDAO {
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                country = new Country(rs.getInt("id"), rs.getString("name"), rs.getString("code"), rs.getInt("continent_id"));
+               // country = new Country(rs.getInt("id"), rs.getString("name"), rs.getString("code"), rs.getInt("continent_id"));
                 System.out.println("Tara gasita: " + country.getName());
             } else {
                 System.out.println("Nu s-a gasit nici o tara cu id-ul: " + id);

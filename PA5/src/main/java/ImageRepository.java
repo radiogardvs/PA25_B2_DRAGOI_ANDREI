@@ -63,8 +63,6 @@ public class ImageRepository {
 
         for (ImageItem img : images) {
             html.append("<li><b>").append(img.name()).append("</b> (")
-                    .append(img.date()).append(") - Tags: ")
-                    .append(String.join(", ", img.tags()))
                     .append("<br><img src=\"").append(img.location()).append("\" width='200'></li>");
         }
 
