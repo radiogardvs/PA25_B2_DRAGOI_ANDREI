@@ -23,12 +23,10 @@ public abstract class AbstractRepository<T, ID> {
         executeInTransaction(em -> em.persist(entity), "create");
     }
 
-    // Metoda pentru găsirea unei entități după ID
     public T findById(ID id) {
         return measureExecution(() -> em.find(entityClass, id), "findById");
     }
 
-    // Metoda pentru găsirea entităților după nume
     public List<T> findByName(String name) {
         return measureExecution(() ->
                 em.createNamedQuery(entityClass.getSimpleName() + ".findByName", entityClass)
@@ -36,7 +34,6 @@ public abstract class AbstractRepository<T, ID> {
                         .getResultList(), "findByName");
     }
 
-    // Metoda care execută acțiunea în cadrul unei tranzacții
     protected void executeInTransaction(Consumer<EntityManager> action, String label) {
         var tx = em.getTransaction();
         try {
@@ -53,12 +50,10 @@ public abstract class AbstractRepository<T, ID> {
         }
     }
 
-    // Metoda care măsoară timpul de execuție pentru o acțiune și o loghează
     protected <R> R measureExecution(Supplier<R> action, String label) {
         long start = System.nanoTime();
         try {
-            R result = action.get();  // Folosește .get() pentru a obține rezultatul din Supplier
-            long end = System.nanoTime();
+            R result = action.get();  long end = System.nanoTime();
             logger.info(() -> label + " executed in " + (end - start) / 1_000_000 + " ms.");
             return result;
         } catch (RuntimeException e) {
