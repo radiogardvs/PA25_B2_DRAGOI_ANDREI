@@ -45,7 +45,6 @@ public class CitiesService {
         return CitiesMapper.toDTO(entity);
     }
 
-    @Transactional
     public CitiesDTO create(CitiesDTO dto) {
         Cities entity = CitiesMapper.toEntity(dto);
 
@@ -59,7 +58,6 @@ public class CitiesService {
         return CitiesMapper.toDTO(citiesRepository.save(entity));
     }
 
-    @Transactional
     public CitiesDTO update(Long id, CitiesDTO dto) {
         Cities existing = citiesRepository.findById(id)
                 .orElseThrow(() -> {

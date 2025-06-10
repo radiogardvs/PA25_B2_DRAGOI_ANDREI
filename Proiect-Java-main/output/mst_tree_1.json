@@ -1,0 +1,12 @@
+{
+  "nodes" : [ 1, 2, 0 ],
+  "edges" : [ {
+    "weight" : 1,
+    "from" : 1,
+    "to" : 2
+  }, {
+    "weight" : 3,
+    "from" : 0,
+    "to" : 1
+  } ]
+}

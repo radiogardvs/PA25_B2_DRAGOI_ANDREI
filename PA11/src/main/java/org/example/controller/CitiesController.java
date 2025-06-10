@@ -62,7 +62,7 @@ public class CitiesController {
             tags = {"cities", "post"}
     )
     @PostMapping
-    public ResponseEntity<CitiesDTO> createCities(@Valid @RequestBody CitiesDTO dto) {
+    public ResponseEntity<CitiesDTO> createCities(@RequestBody CitiesDTO dto) {
 
         CitiesDTO createdRequest = CitiesService.create(dto);
 
@@ -78,7 +78,7 @@ public class CitiesController {
     @PutMapping("/{id}")
     public ResponseEntity<CitiesDTO> updateCities(
             @PathVariable Long id,
-            @Valid @RequestBody CitiesDTO dto) {
+            @RequestBody CitiesDTO dto) {
         CitiesDTO updatedRequest = CitiesService.update(id, dto);
         return ResponseEntity.ok(updatedRequest);
     }

@@ -13,23 +13,20 @@ public class Countries implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
     private String code;
 
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "continent_id", nullable = false)
+    @JoinColumn(name = "continent_id")
     private Continents continent;
 
 
     @OneToMany(mappedBy = "country", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Cities> cities = new ArrayList<>();
 
-    @Column(nullable = false)
     private Long color;
     public Countries() {
         this.name = "NoCountry";

@@ -14,7 +14,6 @@ public class Continents implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
     private String name;
 
     @OneToMany(mappedBy = "continent", cascade = CascadeType.ALL, orphanRemoval = true)

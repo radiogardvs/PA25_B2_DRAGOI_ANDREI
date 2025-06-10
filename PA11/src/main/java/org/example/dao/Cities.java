@@ -11,23 +11,18 @@ public class Cities implements Serializable {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "country_id", nullable = false)
+    @JoinColumn(name = "country_id")
     private Countries country;
 
 
-    @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
     private Boolean capital;
 
-    @Column(nullable = false)
     private Double latitude;
 
-    @Column(nullable = false)
     private Double longitude;
 
-    @Column(nullable = false)
     private Integer population;
 
 
